@@ -7,7 +7,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures, MinMaxScaler
+from sklearn.preprocessing import PolynomialFeatures
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
@@ -34,10 +34,8 @@ def display_results_table(linear, quadratic, cubic):
   
 
 
-# Read and normalize data from csv
+# Read data from csv
 raw_data = pd.read_csv("a1_data.csv")
-scaler = MinMaxScaler()
-normalized_data = scaler.fit(raw_data)
 
 
 # Separate into features (inputs) and response (output)
